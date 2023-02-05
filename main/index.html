@@ -1,0 +1,94 @@
+<!--A declaration that tells the browser what version of HTML the document is written in-->
+<!DOCTYPE html>
+<!--Tell DOM what language code is in-->
+<lang="en">
+
+<!---->
+<!--meta data is used by browser, this data is not visible to site visitors-->
+<head>
+    <!--Specifies the character coding for the HTML document-->
+    <meta charset="UTF-8">
+    <!--Gives the browser instructions on how to control the page's dimensions and scaling, which will vary depending on the device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Use the X-UA-Compatible meta tag on web pages where you suspect that Internet Explorer 8 will attempt to render the page in an incorrect view.-->
+    <!--ie=edge means IE should use the latest (edge) version of its rendering engine-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Title presented on web tab-->
+    <title>Carolina Ramirez Islas| Web Developer</title>
+    <!--The <link> tag defines the reslationship between the current document and an external resource-->
+    <!--Links CSS styling sheet to HTML-->
+    <link rel="stylesheet" href="./assets/css/styl.css" />
+</head>
+
+<body>
+    
+    <!--Top banner with navigation elements-->
+    <header>
+        <h1>Carolina Ramirez Islas</h1>
+        <nav>
+            <!--Clicking an anchor with href="#" will move the scroll position to the top-->
+            <a href="#about">About Me</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact Me</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </header>
+
+    <!--Second banner with image-->
+    <section class="img-banner">
+        <div>
+            <h2>Quote</h2>
+        </div>
+    </section>
+
+
+    <!--Main includes the main contents of the web page (including footer) minus the banner with the navigation-->
+    <main class="page-content">
+
+        <!--"About Me" section of page-->
+        <section class="page-section" id="about">
+            <h2>About Me</h2>
+            <div>
+                <p>Paragraph about me</p>
+                <p>Paragraph about me</p>
+            </div>
+        </section>
+
+        <!--"Work" section of page-->
+        <section class="page-section" id="work">
+            <h2>Work</h2>
+            <!--Flex container for all the "cards" in portfolio-->
+            <div class="work-container">
+                <!--Clicking an anchor with href="#" will move the scroll position to the top-->
+                <!--Surf Report-->
+                <a href="#" class="work-surf-report"></a>
+                <!--LED Wall-->
+                <a href="#" class="work-led-wall"></a>
+                <!--Calculator-->
+                <a href="#" class="work-calculator"></a>
+                <!--Pastel Puzzels-->
+                <a href="#" class="work-pastel-puzzle"></a>
+                <!--Run Buddy-->
+                <a href="#" class="work-run-buddy"></a>
+            </div>
+        </section>
+
+        <!--"Contact Me" section of page-->
+        <section>
+            <h2>Contact Me</h2>
+            <!--Hyperlink all forms of contact-->
+            <div>
+                <!--The <address> element indicates that the enclosed HTML provides contact information for a person/organization.-->
+                <address>
+                    <a href="tel:+15034216105">503.421.6105</a>
+                    <a href="mailto:determination28@gmail.com">determination28@gmail.com</a>
+                    <!--Add Github and LinkedIn once have them updated-->
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </address>
+            </div>
+        </section>
+
+    </main>
+
+</body>
