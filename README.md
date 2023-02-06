@@ -1,13 +1,12 @@
-# caro-ram-is-portfolio
-Carolina's professional portfolio
-
-
-
-# Front-end application Prework Study Guide Webpage
+# Carolina Ramirez Islas's Professional Portfolio
 
 ## Description
 
-This study guide was created to guide students through different fullstack coding concepts that were encountered in the prework. This guide contains notes on HTML, CSS, Git, and JavaScript and will assist coding bootcamp students identify what they need to study from the prework.
+This site is to showcase Carolina Ramirez Islas' work samples so that employers can assess if they want to collaborate with her.
+
+A portfolio of work can showcase skills and talents to employers looking to fill a part-time or full-time position. An effective portfolio highlights one's strongest work as well as the thought processes behind it. Having several deployed projects is a minimum requirement to receive an initial interview at many companies. 
+
+Flexbox, media queries, and CSS variables were some of the main components that were applied to this project for its success.
 
 ## Installation
 
@@ -15,7 +14,7 @@ N/A
 
 ## Usage
 
-In this study guide there are sections that contain notes about HTML, CSS, JavaScript, and Git. For suggestions on what to study first, open the DevTools console by pressing Command+Option+I (macOS) or Control+Shift+I (Windows); you will see a list of topics we learned from the prework along with a suggestion on which topic to study first.
+In this portfolio there are sections that contain information about myself, the work I've done, and my contact information. To navigate to different sections of the page; click on the topic of interest in the top navigation bar and you will be taken to the section of interest. If you click on the contact information located at the bottom of the page; you will be prompted to make contact via the method selected.
 
 To access the Github Repository visit:
 
