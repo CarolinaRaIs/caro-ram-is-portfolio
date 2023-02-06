@@ -7,93 +7,228 @@
 /* :root represents the <html> element and is identical to the selector html , except that its specificity is higher.*/
 /* if two CSS selectors apply to the same element, the one with higher specificity is used*/
 :root {
-    --color1: rgba(68, 88, 119, 1);
-    --color2: rgba(146, 204, 206, 1);
-    --color3: rgba(49, 52, 61, 1);
-    --dark: rgba(28, 29, 33, 1);
-    --light: rgba(238, 238, 247, 1);
+    --mainGreen: rgb(69, 119, 68);
+    --lightGreen: rgb(146, 206, 151);
+    --darkGreen: rgb(53, 72, 54);
+    --dark: rgb(28, 33, 28);
+    --light: rgb(238, 247, 239);
+}
+
+/* Entails contents of entire web page */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* line-height is commonly used to set the distance between lines of text or the height to calculate the box height*/
+    line-height: 1.5;
+    /* With 0 margin, other elements (inline, above, and below) will be in direct contact with the element */
+    /* Margin is the ottermost space around the element. The space beyond the padding and border. */
+    margin: 0;
+    /* The padding is the space between the content and the border */
+    padding: 0;
+    /* color: set up to reference variable for text color. */
+    color: var(--mainGreen);
+    background-color: var(--light);
+}
+
+h1,
+h2,
+h3 {
+    /* The space beyond the padding and border. With 0 margin, other elements (inline, above, and below) will be in direct contact with the element */
+    margin: 0;
 }
 
 /* Top banner with navigation elements*/
 header {
-
+    /* display: flex ensures flex items flex */
+    display: flex;
+    /* The flexbox items are ordered the same way as the text direction, along the main axis (x-axis) */
+    flex-direction: row;
+    /* This property sets whether flex items are forced onto one line or can wrap onto multiple lines. */
+    flex-wrap: wrap;
+    /* aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally). */
+    justify-content: space-between;
+    /* defines the default behavior for how items are laid out along the cross axis (perpendicular to the main axis, y-axis) */
+    align-items: center;
+    /* padding: top right bottom left; */
+    padding: 15px 10% 15px 0;
+    /* sets the background color of an element. */
+    background-color: var(--darkGreen);
+    /* box-shadow: offset-x | offset-y | blur radius | color */ 
+    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
 }
 
 header h1 {
-
+    margin: 0;
+    padding: 5px 1% 5px 10%;
+    font-size: 4vw;
+    line-height: 1.5;
+    color: var(--darkGreen);
+    background-color: var(--lightGreen);
 }
 
-h2,
-h3 {
-
+p {
+    /* The space beyond the padding and border. With 0 margin, other elements (inline, above, and below) will be in direct contact with the element */
+    margin: 0;
 }
 
 nav {
-
+    /* nav elements automatically align like columns or rows with auto width and auto height. */
+    display: flex;
+    flex-direction: row;
+    /* This property sets whether flex items are forced onto one line or can wrap onto multiple lines. */
+    flex-wrap: wrap;
 }
 
 /* Hyperlinked navigation items*/
 nav a {
-
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--lightGreen);
+    background-image: linear-gradient(270deg, var(--lightGreen) 0%, var(--lightGreen) 100%);
+    background-size: 100% 0.2em;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: all 0.25s ease-in;
 }
 
 /* Want there to be an action when cursor hovers over navigation hyperlinked items*/
 nav a:hover {
+    color: var(--mainGreen);
+    background-size: 100% 100%;
+}
 
+main {
+    /* margin top= 20px, margin bottom= 45px */
+    margin: 20px 0 45px 0;
 }
 
 /* Second banner with image*/
 .img-banner {
-
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    min-height: 30vh;
+    background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--lightGreen) 0%, var(--mainGreen) 100%);
+    background: rgb(80, 120, 68);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
 }
 
 /* Second banner header*/
 .img-banner h2 {
+    display: inline;
+    padding: 5px 10px;
+    margin: 0;
+    color: var(--darkGreen);
+    font-size: 2.3rem;
+    line-height: 1.2;
+    background-color: var(--lightGreen);
+}
 
+/* flex-basis 90% */
+.img-banner div {
+    flex: 0 0 90%
 }
 
 /* Main element*/
 .page-content {
-
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
 }
 
 /* Includes "About Me" container "Work" and "Contact Me" container*/
 .page-section {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 25px 0;
+    padding: 10px 0;
 }
 
+/* The operand on the left of > is the parent and the operand on the right is the children element */
+/* element > element selector in CSS is used to style only those elements which are the children of specific parent. */
+.page-section > h2 {
+    flex-basis: 20%;
+    padding-right: 15px;
+    /* border: size | type | color */
+    border-right: 4px solid var(--mainGreen);
+    font-size: 4vw;
+    text-align: right;
+    line-height: 1.5;
+}
+
+.page-section p {
+    margin-bottom: 20px;
+}
+
+/* The operand on the left of > is the parent and the operand on the right is the children element */
+/* element > element selector in CSS is used to style only those elements which are the children of specific parent. */
+.page-section > div {
+    flex: 0 0 75%;
+}
 
 /*  WORK:  */
 
 /* Container for all the cards that show work apps in portfolio* section*/
 /* Want to */
 .work-container {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* All work/portfolio items in work container */
 .work-app {
-
+    min-height: 150px;
+    max-height: 150px;
+    display: flex;
+    /* flex-basis: calc ()  would give you a fixed number of pixels between 50% and 1em */
+    flex-basis: calc(50% - 1em);
+    margin: 0.5em;
+    padding: 0 0 20px 0; 
+    align-items: flex-end;
+    font-size: 1rem;
+    color: var(--darkGreen);
+    text-decoration: none;
+    /* The background-size CSS property sets the size of the element's background image. */
+    background-size: 150%;
+    /* The background-blend-mode property defines how an element's background-image should blend with its background-color: */
+    background-blend-mode: soft-light;
+    /* CSS transitions provide a way to control animation speed when changing CSS properties. */
+    transition: all 0.5s;
+    border: 5px solid var(--lightGreen);
+    background-color: var(--mainGreen);
 }
 
 /* When the cursor hovers over the portfolio applications, .work-app container should hightlight the entire continer to a hue of choice as the background*/
 .work-app:hover {
-
+    background-color: black;
 }
 
 /* Want to position the title and subtitle of application to the left of flex-container work-app*/
 .work-app div {
-
+    background-color: var(--lightGreen);
+    /* Top/bottom padding is 8px and left/right padding is 10px */
+    padding: 8px 10px;
 }
 
 /* Want to customize the portfolio item headings within .work-app parent container*/
 .work-app h3 {
-
+    font-size: 1.5rem;
 }
 
 /* Want to make first application slightly larger than others so had to call it using first-child feature*/
 .work-app:first-child {
-
+    min-height: 400px;
+    flex-basis: 100%;
 }
 
 
@@ -101,40 +236,57 @@ nav a:hover {
 
 /* Want to format all the contact information within the address container, located within the contact-me page section*/
 .contact-me address {
-
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Position and formating of all hyperlinked contact information*/
 .contact-me a {
-
+    /* inline-block allows to set a width and height on the element. */
+    display: inline-block;
+    padding: 5px;
+    margin: 0 0.2rem 0.1rem;
+    transition: all 0.25s ease-in;
+    font-size: 1.3rem;
+    color: var(--darkGreen);
+    font-style: normal;
+    text-decoration: none;
+    background-size: 100% 0.1em;
+    background-image: linear-gradient(270deg, var(--mainGreen) 0%, var(--mainGreen) 100%);
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 /* Want there to be a font color change when cursor is hovered over hyperlinked contact information*/
 .contact-me a:hover {
-
+    background-size: 100% 90%;
+    color: var(--lightGreen);
 }
 
 
 /* work-app container background images for each work-app item (child)*/
 /* css background images do not require alt text */
 .surf-report {
-    background-image: url("");
+    background-image: url("../images/02-portfolio-4.jpg");
 }
 
 .led-wall {
-
+    background-image: url("../images/02-portfolio-1.jpg");
 }
 
 .calculator {
-
+    background-image: url("../images/02-portfolio-2.jpg");
 }
 
 .pastel-puzzle {
-
+    background-image: url("../images/02-portfolio-3.jpg");
 }
 
 .run-buddy {
-
+    background-image: url("../images/02-run-buddy.jpg");
 }
 
 
@@ -162,7 +314,7 @@ nav a:hover {
     font-size: 10vw;
   }
 
-  /* justify-content controls alignment of all items along the "main axis" (y-axis). */
+  /* justify-content controls alignment of all items along the "main axis" (x-axis). */
   header nav {
     justify-content: center;
   }
@@ -178,9 +330,11 @@ nav a:hover {
   }
 
    /* element > element selector */
+   /* The operand on the left of > is the parent and the operand on the right is the children element */
+   /* element > element selector in CSS is used to style only those elements which are the children of specific parent. */
   .page-section > h2 {
     border-right: none;
-    border-bottom: 4px solid var(--primary);
+    border-bottom: 4px solid var(--mainGreen);
     margin-bottom: 20px;
     padding-bottom: 10px;
     text-align: left;
