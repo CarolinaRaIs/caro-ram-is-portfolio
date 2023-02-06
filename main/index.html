@@ -14,7 +14,7 @@
     <!--ie=edge means IE should use the latest (edge) version of its rendering engine-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Title presented on web tab-->
-    <title>Carolina Ramirez Islas| Web Developer</title>
+    <title>Carolina RI | Web Developer</title>
     <!--The <link> tag defines the reslationship between the current document and an external resource-->
     <!--Links CSS styling sheet to HTML-->
     <link rel="stylesheet" href="./assets/css/styl.css" />
@@ -34,7 +34,7 @@
         </nav>
     </header>
 
-    <!--Second banner with image-->
+    <!--Second banner with decorative image-->
     <section class="img-banner">
         <div>
             <h2>Quote</h2>
@@ -42,7 +42,7 @@
     </section>
 
 
-    <!--Main includes the main contents of the web page (including footer) minus the banner with the navigation-->
+    <!--Main includes the main contents of the web page (including contact information) minus the banner with the navigation-->
     <main class="page-content">
 
         <!--"About Me" section of page-->
@@ -59,22 +59,51 @@
             <h2>Work</h2>
             <!--Flex container for all the "cards" in portfolio-->
             <div class="work-container">
-                <!--Clicking an anchor with href="#" will move the scroll position to the top-->
+
+                <!--Clicking an anchor with href="#" will move the scroll position to the top. Want to hyperlink entire div container-->
+                <!--All classes for work/portfolio items start with work-app to reference in CSS so they can be styled uniformly-->
+
                 <!--Surf Report-->
-                <a href="#" class="work-surf-report"></a>
+                <a href="#" class="work-app surf-report"></a>
+                    <div>
+                        <h3>Surf Report</h3>
+                        <!--The <span> tag is an inline container used to mark up a part of a text, or a part of a document-->
+                        <!--Subtitle to app div-->
+                        <span>MERN Stack</span>
+                    </div>
+
                 <!--LED Wall-->
-                <a href="#" class="work-led-wall"></a>
+                <a href="#" class="work-app led-wall"></a>
+                    <div>
+                        <h3>LED Wall</h3>
+                        <span>Node/IoT</span>
+                    </div>
+
                 <!--Calculator-->
-                <a href="#" class="work-calculator"></a>
+                <a href="#" class="work-app calculator"></a>
+                    <div>
+                        <h3>Calculator</h3>
+                        <span>React/JavaScript/CSS</span>
+                    </div>
+
                 <!--Pastel Puzzels-->
-                <a href="#" class="work-pastel-puzzle"></a>
+                <a href="#" class="work-app pastel-puzzle"></a>
+                    <div>
+                        <h3>Pastel Puzzels</h3>
+                        <span>MERN Stack</span>
+                    </div>
+
                 <!--Run Buddy-->
-                <a href="#" class="work-run-buddy"></a>
+                <a href="#" class="work-app run-buddy"></a>
+                    <div>
+                        <h3>Run Buddy</h3>
+                        <span>HTML/ CSS</span>
+                    </div>
             </div>
         </section>
 
         <!--"Contact Me" section of page-->
-        <section>
+        <section class="page-section contact-me" id="contact">
             <h2>Contact Me</h2>
             <!--Hyperlink all forms of contact-->
             <div>

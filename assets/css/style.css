@@ -1,0 +1,222 @@
+/* It is often useful to set box-sizing to border-box to lay out elements*/
+/* border-box tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added*/
+* {
+    box-sizing:border-box;
+}
+
+/* :root represents the <html> element and is identical to the selector html , except that its specificity is higher.*/
+/* if two CSS selectors apply to the same element, the one with higher specificity is used*/
+:root {
+    --color1: rgba(68, 88, 119, 1);
+    --color2: rgba(146, 204, 206, 1);
+    --color3: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+}
+
+/* Top banner with navigation elements*/
+header {
+
+}
+
+header h1 {
+
+}
+
+h2,
+h3 {
+
+}
+
+nav {
+
+}
+
+/* Hyperlinked navigation items*/
+nav a {
+
+}
+
+/* Want there to be an action when cursor hovers over navigation hyperlinked items*/
+nav a:hover {
+
+}
+
+/* Second banner with image*/
+.img-banner {
+
+}
+
+/* Second banner header*/
+.img-banner h2 {
+
+}
+
+/* Main element*/
+.page-content {
+
+}
+
+/* Includes "About Me" container "Work" and "Contact Me" container*/
+.page-section {
+
+}
+
+
+/*  WORK:  */
+
+/* Container for all the cards that show work apps in portfolio* section*/
+/* Want to */
+.work-container {
+
+}
+
+/* All work/portfolio items in work container */
+.work-app {
+
+}
+
+/* When the cursor hovers over the portfolio applications, .work-app container should hightlight the entire continer to a hue of choice as the background*/
+.work-app:hover {
+
+}
+
+/* Want to position the title and subtitle of application to the left of flex-container work-app*/
+.work-app div {
+
+}
+
+/* Want to customize the portfolio item headings within .work-app parent container*/
+.work-app h3 {
+
+}
+
+/* Want to make first application slightly larger than others so had to call it using first-child feature*/
+.work-app:first-child {
+
+}
+
+
+/*  CONTACT ME:  */
+
+/* Want to format all the contact information within the address container, located within the contact-me page section*/
+.contact-me address {
+
+}
+
+/* Position and formating of all hyperlinked contact information*/
+.contact-me a {
+
+}
+
+/* Want there to be a font color change when cursor is hovered over hyperlinked contact information*/
+.contact-me a:hover {
+
+}
+
+
+/* work-app container background images for each work-app item (child)*/
+/* css background images do not require alt text */
+.surf-report {
+    background-image: url("");
+}
+
+.led-wall {
+
+}
+
+.calculator {
+
+}
+
+.pastel-puzzle {
+
+}
+
+.run-buddy {
+
+}
+
+
+/* Media Query: To create a more responsive web design; react with diffferent screen sizes */
+
+/* Add media query later in code because "CSS ruless that appear later in the embedded styles override earlier rules if both have the same specificity" */
+/* Media query; expressions that will limit when the query will trigger*/
+/* "If the [device width] is less than or equal to (___px), then proceed with the following code in { }" */
+/* Use 980px and 768 px becasue the iPad Air has a breakpoint with 768px and thats the largest amount of px for most common apple products and 980px for laptops which cover majority basis of screen sizes */
+
+/* text-align property specifies the horizontal alignment of text in an element */
+/* justify-content controls alignment of all items along the "main axis" (y-axis). */
+/* Padding: top=0, right=0, bottom=10px left=0 */ 
+@media screen and (max-width: 980px) {
+  header {
+    text-align: center;
+    justify-content: center;
+    padding: 0 0 10px 0;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  /* justify-content controls alignment of all items along the "main axis" (y-axis). */
+  header nav {
+    justify-content: center;
+  }
+
+  /* Includes "About Me" container "Work" and "Contact Me" container*/
+  /* element > element selector */
+  /* flex: flex-grow flex-shrink flex-basis */
+  /* The flex-basis property specifies the initial main size of a flex item */
+  /* "Take up 100% and dont "grow" or "shrink" any more, proportional to other elements" */
+  .page-section > h2,
+  .page-section > div {
+    flex-basis: 100%;
+  }
+
+   /* element > element selector */
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+
+/* Use 980px and 768px because the iPad Air has a breakpoint with 768px and thats the largest amount of px for most common apple products and 980px for laptops which cover majority basis of screen sizes */
+@media screen and (max-width: 768px) {
+  /* "Take up 100% and dont "grow" or "shrink" any more, proportional to other elements" */
+  .work-app,
+  .work-app:first-child {
+    flex-basis: 100%;
+  }
+
+  .work-app:first-child {
+    /* min height prevents the height property for the first work portfolio item from becoming smaller than 150px */
+    min-height: 150px;
+  }
+
+  .img-banner {
+    /* justify-content controls alignment of all items along the "main axis" (y-axis). */
+    justify-content: center;
+    /* align property controls alignment of text on the cross axis (x-axis) */
+    text-align: center;
+  }
+  
+  .contact address {
+    /* The align-items property controls alignment of items in the address parent element on the cross axis */
+    align-items: flex-start;
+     /* The direction in which the contact info is presented is stacked */
+    flex-direction: column;
+  }
+}
+
+
+
+
