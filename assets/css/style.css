@@ -112,7 +112,7 @@ main {
     align-items: flex-end;
     text-align: right;
     min-height: 30vh;
-    background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--lightGreen) 0%, var(--mainGreen) 100%);
+    background-image: url("../images/portfolio\ banner\ img.jpg"), linear-gradient(180deg, var(--lightGreen) 0%, var(--mainGreen) 100%);
     background: rgb(80, 120, 68);
     background-size: cover;
     background-position: center;
@@ -191,7 +191,7 @@ main {
     max-height: 150px;
     display: flex;
     /* flex-basis: calc ()  would give you a fixed number of pixels between 50% and 1em */
-    flex-basis: calc(50% - 1em);
+    flex-basis: calc(40% - 1em);
     margin: 0.5em;
     padding: 0 0 20px 0; 
     align-items: flex-end;
@@ -199,7 +199,7 @@ main {
     color: var(--darkGreen);
     text-decoration: none;
     /* The background-size CSS property sets the size of the element's background image. */
-    background-size: 150%;
+    background-size: 100%;
     /* The background-blend-mode property defines how an element's background-image should blend with its background-color: */
     background-blend-mode: soft-light;
     /* CSS transitions provide a way to control animation speed when changing CSS properties. */
@@ -223,6 +223,7 @@ main {
 /* Want to customize the portfolio item headings within .work-app parent container*/
 .work-app h3 {
     font-size: 1.5rem;
+    margin: 50px;
 }
 
 /* Want to make first application slightly larger than others so had to call it using first-child feature*/
