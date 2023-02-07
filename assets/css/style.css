@@ -112,7 +112,7 @@ main {
     align-items: flex-end;
     text-align: right;
     min-height: 30vh;
-    background-image: url("../images/portfolio\ banner\ img.jpg"), linear-gradient(180deg, var(--lightGreen) 0%, var(--mainGreen) 100%);
+    background-image: url("../images/portfolio-banner-img.jpg"), linear-gradient(180deg, var(--lightGreen) 0%, var(--mainGreen) 100%);
     background: rgb(80, 120, 68);
     background-size: cover;
     background-position: center;
